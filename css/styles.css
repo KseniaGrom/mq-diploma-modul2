@@ -411,14 +411,19 @@ body {
     overflow: hidden;
 }
 
+.aside-label {
+    width: 100%;
+}
+
 .aside-search-input {
     box-sizing: border-box;
     font-size: 13px;
     border: none;
     height: 100%;
     padding-left: 18px;
-    padding-right: 52px;
+    padding-right: 16px;
     background-color: #f4f7f6;
+    width: 100%;
 }
 
 .aside-search-input:focus {
@@ -1018,17 +1023,17 @@ body {
         padding-right: 10px;
     }
 
+    .aside-label {
+        width: 85%;
+    }
+
     .aside-search-input {
         padding-left: 20px;
-        padding-right: 34px;
+        padding-right: 20px;
     }
 
-    .aside-subscribe-input {
-        width: 94%;
-    }
-
-    .aside-subscribe-btn {
-        width: 94%;
+    .aside-tags-list {
+        margin-right: 6px;
     }
 
     .shop-title {
@@ -1071,6 +1076,11 @@ body {
         padding-top: 31px;
     }
 
+    .popup-wrapper {
+        top: calc(100vh - 35%);
+        position: absolute;
+    }
+
     .popup-close {
         top: -34px;
         height: 27px;
@@ -1099,17 +1109,23 @@ body {
 }
 
 @media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait), (max-width: 971px)  {
+
     .trends-blocks {
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     }
+
+    .popup-wrapper {
+        top: 90%
+    }
 }
 
-/*@media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
-    .popup-wrapper {
-        position: absolute;
-        top: 96%;
+@media (max-width: 745px) {
+    .shop-cards {
+        justify-content: center;
     }
-}*/
+}
+
+/*--Mobile---*/
 
 @media (max-width: 640px) {
     .header {
@@ -1138,7 +1154,7 @@ body {
         width: 271px;
         height: auto;
         padding-top: 28px;
-        padding-left: 28px;
+        margin: 0 auto;
     }
 
     .header-content-wrapper {
@@ -1163,7 +1179,7 @@ body {
     }
 
     .trends-title:after {
-        left: 40%;
+        left: 45%;
     }
 
     .trends-blocks {
@@ -1256,7 +1272,7 @@ body {
     }
 
     .aside-content-posts-title:after {
-        left: 39.1%;
+        left: 44.1%;
     }
 
     .aside-content-posts-list {
@@ -1269,7 +1285,7 @@ body {
 
     .aside-search-input {
         padding-left: 17px;
-        padding-right: 97px;
+        padding-right: 17px;
     }
 
     .aside-content-side {
@@ -1336,8 +1352,9 @@ body {
     }
 
     .popup-wrapper {
-        top: 43%;
+        top: 50%;
         width: 330px;
+        position: absolute;
     }
 
     .popup-close {
@@ -1380,6 +1397,7 @@ body {
     .radio-label {
         margin-left: 7px;
     }
+
 }
 
 @media (max-width: 640px) and (orientation: landscape) {
@@ -1388,8 +1406,7 @@ body {
     }
 
     .popup-wrapper {
-        position: absolute;
-        top: 96%;
+        top: 90%
     }
 }
 
