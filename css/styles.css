@@ -32,6 +32,8 @@ body {
     background-color: #000000;
     position: relative;
     z-index: 0;
+    padding-top: 28px;
+    padding-bottom: 131px;
 }
 
 .header:after {
@@ -56,25 +58,18 @@ body {
 .header-content-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header-logo {
     width: 179px;
     height: auto;
-    padding-top: 28px;
-    padding-left: 28px;
-}
-
-.header-logo-mobile {
-    display: none;
 }
 
 .header-menu-list {
     display: flex;
     flex-direction: row;
     list-style: none;
-    padding-top: 40px;
-    padding-right: 25px;
 }
 
 .header-menu-link {
@@ -95,9 +90,13 @@ body {
     background-size: 24px;
     display: none;
     width: 44px;
-    margin-top: 54px;
+    height: 44px;
     background-image: url("../svg/burger-menu.svg");
     background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
 }
 
 .header-title {
@@ -109,7 +108,6 @@ body {
     text-align: center;
     margin: 0 auto;
     margin-top: 101px;
-    padding-bottom: 131px;
 }
 
 /*---Trends---*/
@@ -329,8 +327,8 @@ body {
     width: 100%;
 }
 
-.aside-content-side {
-    margin-bottom: 57.5px;
+.aside-content-side:not(:last-child) {
+    margin-bottom: 57px;
 }
 
 .aside-content-posts-title {
@@ -342,7 +340,6 @@ body {
     position: relative;
     padding-bottom: 13px;
     margin-bottom: 28px;
-    padding-right: 17px;
 }
 
 .aside-content-posts-title:after {
@@ -356,7 +353,7 @@ body {
 
 .aside-content-posts-list {
     display: flex;
-    margin-top: 21.9px;
+    margin-top: 22px;
 }
 
 .aside-content-posts-image {
@@ -591,6 +588,7 @@ body {
 }
 
 .card-content {
+    width: 30%;
     display: flex;
     flex-direction: column;
 }
@@ -606,7 +604,6 @@ body {
 }
 
 .card-text {
-    width: 300px;
     flex-grow: 1;
     margin-top: -31px;
     border: 3px solid #b59f5b;
@@ -637,7 +634,7 @@ body {
 .price-link {
     display: flex;
     justify-content: space-between;
-    padding-top: 24px;
+    margin-top: 24px;
 }
 
 .price {
@@ -683,8 +680,10 @@ body {
 }
 
 .footer-wrapper {
+    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .footer-social {
@@ -693,13 +692,8 @@ body {
     display: flex;
 }
 
-.footer-social-item {
-    padding-top: 35px;
-    padding-bottom: 35px;
-}
-
 .footer-social-item:nth-child(n+2) {
-    padding-left: 26.5px;
+    margin-left: 26px;
 }
 
 .footer-link {
@@ -782,6 +776,8 @@ body {
     right: 0;
     width: 20px;
     height: 20px;
+    border: none;
+    background-color: inherit;
 }
 
 .popup-content {
@@ -915,11 +911,11 @@ body {
     .header {
         min-width: 100%;
         background-image: url("../images/banner-bg-tablet.jpg");
+        padding-bottom: 108px;
     }
 
     .header-logo {
         width: 157px;
-        padding-top: 44px;
         padding-left: 21px;
     }
 
@@ -935,7 +931,6 @@ body {
         font-size: 40px;
         margin-top: 79px;
         line-height: 1.5;
-        padding-bottom: 108px;
     }
 
     .trends {
@@ -953,7 +948,7 @@ body {
     }
 
     .trends-blocks-box {
-        height: 246px;
+        min-height: 246px;
     }
 
     .trends-box-link {
@@ -1131,6 +1126,7 @@ body {
     .header {
         min-width: 100%;
         background-image: url(../images/banner-mobile.jpg);
+        padding-bottom: 211px;
     }
 
     .header-menu {
@@ -1143,29 +1139,25 @@ body {
         margin: 0;
         background-size: 34px;
         width: 25px;
+        margin-left: auto;
     }
 
     .header-logo {
-        display: none;
-    }
-
-    .header-logo-mobile {
         display: block;
         width: 271px;
         height: auto;
-        padding-top: 28px;
         margin: 0 auto;
     }
 
     .header-content-wrapper {
         padding-top: 30px;
+        flex-direction: column-reverse;
     }
 
     .header-title {
         font-size: 26px;
         line-height: 1.3846;
         margin-top: 33px;
-        padding-bottom: 211px;
     }
 
     .trends {
@@ -1200,7 +1192,7 @@ body {
     }
 
     .trends-box-text {
-        padding-top: 8px;
+        margin-top: 8px;
     }
 
     .information {
@@ -1219,10 +1211,6 @@ body {
     }
 
     .main-content-image {
-        width: 100%;
-    }
-
-    .main-content-frame {
         width: 100%;
     }
 
@@ -1268,7 +1256,6 @@ body {
     .aside-content-posts-title {
         font-size: 16px;
         margin-bottom: 28px;
-        padding-right: 4px;
     }
 
     .aside-content-posts-title:after {
@@ -1288,8 +1275,8 @@ body {
         padding-right: 17px;
     }
 
-    .aside-content-side {
-        margin-bottom: 37.5px;
+    .aside-content-side:not(:last-child) {
+        margin-bottom: 37px;
     }
 
     .aside-tags {
