@@ -67,6 +67,7 @@ body {
 }
 
 .header-menu-list {
+    padding: 0;
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -142,7 +143,7 @@ body {
 }
 
 .trends-blocks-box {
-    height: 319px;
+    min-height: 319px;
     background-color: #eff6f1;
     position: relative;
     z-index: 0;
@@ -244,7 +245,7 @@ body {
 }
 
 .main-content-frame {
-    width: 45%;
+    padding-left: 50px;
 }
 
 .main-content-category {
@@ -491,7 +492,6 @@ body {
 }
 
 .aside-tags {
-    margin-top: -5px;
     width: 100%;
     padding: 0;
     display: flex;
@@ -600,6 +600,7 @@ body {
 .card-img {
     background-color: #eff6f1;
     height: 204px;
+    width: 100%;
     display: block;
 }
 
@@ -675,12 +676,11 @@ body {
     max-width: 1220px;
     margin: auto;
     background-color: #f4f7f6;
-    height: 84px;
     padding: 0 15px;
 }
 
 .footer-wrapper {
-    height: 100%;
+    height: 84px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -998,6 +998,7 @@ body {
 
     .main-content-frame {
         width: 92%;
+        padding: 0;
     }
 
     .main-content-title {
@@ -1041,6 +1042,7 @@ body {
 
     .card-content {
         margin-bottom: 27px;
+        width: 48%;
     }
 
     .card-img {
@@ -1111,12 +1113,6 @@ body {
 
     .popup-wrapper {
         top: 90%
-    }
-}
-
-@media (max-width: 745px) {
-    .shop-cards {
-        justify-content: center;
     }
 }
 
@@ -1214,6 +1210,10 @@ body {
         width: 100%;
     }
 
+    .main-content-frame {
+        padding: 0;
+    }
+
     .main-content-category {
         padding-top: 11px;
     }
@@ -1280,13 +1280,11 @@ body {
     }
 
     .aside-tags {
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
     }
 
-    .aside-tags-list {
-        margin-right: 0;
-        margin-bottom: 7px;
-    }
 
     .aside-tags-list:nth-child(n+4) {
         margin-top: 0;
@@ -1305,12 +1303,15 @@ body {
         height: 284px;
     }
 
+    .shop-cards {
+        justify-content: center;
+    }
+
     .shop-card-img {
         padding: 0 36px;
     }
 
     .card-text {
-        margin-left: 15px;
         padding: 48px 8px 26px 17px;
     }
 
@@ -1323,7 +1324,8 @@ body {
     }
 
     .card-content {
-        padding-bottom: 24px
+        padding-bottom: 24px;
+        width: 90%;
     }
 
     .shop {
@@ -1397,3 +1399,8 @@ body {
     }
 }
 
+@media (max-width: 396px) {
+    .aside-tags {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
